@@ -1,0 +1,7 @@
+if [ $1 = 0 ]; then
+  /usr/bin/systemctl stop mail-autodiscovery.target
+  /usr/bin/systemctl stop mail-postdiscovery.target
+  /usr/bin/systemctl disable mail-autodiscovery.target
+  /usr/bin/systemctl disable mail-postdiscovery.target
+fi
+

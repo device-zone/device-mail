@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+umask 0002
+
+OPTIONS="--fqdn tls-dns --symlink-base /etc/pki/tls/certs --symlink-suffix .crt --symlink tls-ca-certs"
+
+if [ "$1" == "--" ]; then
+
+  /usr/libexec/device-set ${OPTIONS} "$@"
+
+  /usr/bin/sudo /usr/bin/systemctl try-reload-or-restart mail-autodiscovery.target
+  /usr/bin/sudo /usr/bin/systemctl try-reload-or-restart mail-postdiscovery.target
+
+elif [ "$1" == "-c" ]; then
+
+  /usr/libexec/device-set ${OPTIONS} "$@"
+
+fi
+
+

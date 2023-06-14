@@ -1,0 +1,8 @@
+# systemd service for managing all mail autoconfiguration.
+
+[Unit]
+Description=Mail Configuration Autodiscovery
+
+[Install]
+WantedBy=multi-user.target
+

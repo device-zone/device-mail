@@ -1,0 +1,9 @@
+# systemd service for managing all mail postconfiguration.
+
+[Unit]
+Description=Mail Configuration Postdiscovery
+After=mail-autodiscovery.target
+
+[Install]
+WantedBy=multi-user.target
+

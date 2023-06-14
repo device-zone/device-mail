@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+umask 0002
+
+OPTIONS="--polar disabled --relation-base /etc/device/services/ldap/suffix --relation-name name --relation-suffix .txt --relation ldap-suffix"
+
+if [ "$1" == "--" ]; then
+
+  /usr/libexec/device-set ${OPTIONS} "$@"
+
+  /usr/bin/sudo /usr/bin/systemctl try-reload-or-restart mail-autodiscovery.target
+  /usr/bin/sudo /usr/bin/systemctl try-reload-or-restart mail-postdiscovery.target
+
+elif [ "$1" == "-c" ]; then
+
+  /usr/libexec/device-set ${OPTIONS} "$@"
+
+fi
+
