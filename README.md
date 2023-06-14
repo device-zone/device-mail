@@ -1,0 +1,2 @@
+# device-mail
+Mail appliance
