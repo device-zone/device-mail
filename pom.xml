@@ -29,6 +29,7 @@
     <module>device-mail-el9</module>
     <module>device-mail-tls-el9</module>
     <module>device-mail-ldap-el9</module>
+    <module>device-mail-server-el9</module>
   </modules>
 
   <build>
