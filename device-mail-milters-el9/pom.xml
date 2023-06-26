@@ -85,7 +85,7 @@
             <require>device-opendkim</require>
 	    <require>device-openarc</require>
 	    <require>device-opendmarc</require>
-	    <require>device-clamav</require>
+	    <require>device-clamav-milter</require>
 	    <require>device-spamass-milter</require>
           </requires>
         </configuration>
