@@ -3,7 +3,7 @@
 set -e
 umask 0002
 
-OPTIONS="--fqdn tls-dns --symlink-base /etc/pki/tls/certs --symlink-suffix .crt --symlink tls-ca-certs"
+OPTIONS="--fqdn tls-dns --fqdn tls-client-dns --symlink-base /etc/pki/tls/certs --symlink-suffix .crt --symlink tls-ca --symlink-base /etc/pki/tls/certs --symlink-suffix .crt --symlink tls-client-ca"
 
 if [ "$1" == "--" ]; then
 
