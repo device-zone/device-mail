@@ -106,6 +106,9 @@
                 <source>
                   <location>target/classes/usr/libexec/device/services/mail/tls/set</location>
                 </source>
+                <source>
+                  <location>target/classes/usr/libexec/device/services/mail/tls/show</location>
+                </source>
               </sources>
             </mapping>
           </mappings>
