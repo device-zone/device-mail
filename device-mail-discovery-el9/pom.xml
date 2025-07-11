@@ -4,7 +4,7 @@
   <parent>
     <artifactId>device-mail</artifactId>
     <groupId>zone.device.platform</groupId>
-    <version>0.9.6</version>
+    <version>0.9.7-SNAPSHOT</version>
   </parent>
 
   <properties>
@@ -18,7 +18,7 @@
 
   <artifactId>device-mail-discovery</artifactId>
   <groupId>zone.device.platform.el9</groupId>
-  <version>0.9.6</version>
+  <version>0.9.7-SNAPSHOT</version>
   <packaging>rpm</packaging>
   <name>device mail discovery applicance for el9</name>
   <description>Packaging for the mail discovery appliance for ${release.distribution}</description>
