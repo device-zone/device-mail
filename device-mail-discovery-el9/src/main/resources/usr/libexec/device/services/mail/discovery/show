@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+umask 0002
+
+OPTIONS="--show virtualhost \
+	 --show-flags disabled \
+	 --show-table virtualhost --flag X \
+	 --polar disabled \
+	 --required \
+	 --relation-base /etc/device/services/www/virtualhost --relation-name name --relation-suffix .txt --relation virtualhost"
+
+if [ "$1" == "--" ]; then
+
+  /usr/libexec/device-set ${OPTIONS} "$@"
+
+elif [ "$1" == "-c" ]; then
+
+  /usr/libexec/device-set ${OPTIONS} "$@"
+
+fi
+
+
